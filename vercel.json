@@ -3,7 +3,7 @@
   "outputDirectory": "dist",
   "headers": [
     {
-      "source": "/:path*.png",
+      "source": "/assets/:path*",
       "headers": [
         {
           "key": "Cache-Control",
@@ -12,56 +12,65 @@
       ]
     },
     {
-      "source": "/:path*.jpg",
+      "source": "/:filename.png",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
+          "value": "public, max-age=86400, must-revalidate"
         }
       ]
     },
     {
-      "source": "/:path*.jpeg",
+      "source": "/:filename.jpg",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
+          "value": "public, max-age=86400, must-revalidate"
         }
       ]
     },
     {
-      "source": "/:path*.gif",
+      "source": "/:filename.jpeg",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
+          "value": "public, max-age=86400, must-revalidate"
         }
       ]
     },
     {
-      "source": "/:path*.svg",
+      "source": "/:filename.gif",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
+          "value": "public, max-age=86400, must-revalidate"
         }
       ]
     },
     {
-      "source": "/:path*.webp",
+      "source": "/:filename.svg",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
+          "value": "public, max-age=86400, must-revalidate"
         }
       ]
     },
     {
-      "source": "/:path*.ico",
+      "source": "/:filename.webp",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
+          "value": "public, max-age=86400, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/:filename.ico",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, must-revalidate"
         }
       ]
     }
